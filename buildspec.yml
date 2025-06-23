@@ -7,7 +7,6 @@ phases:
       - aws --version
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 845091770108.dkr.ecr.ap-south-1.amazonaws.com
       - REPOSITORY_URI=845091770108.dkr.ecr.ap-south-1.amazonaws.com/nodejs-ssl-server
-      - CONTAINER_NAME=nodejs-ssl-server
 
   build:
     commands:
@@ -25,5 +24,10 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - appspec.yml
+    - scripts/**
+    - Dockerfile
+    - app.js
+    - package.json
+    - package-lock.json
   discard-paths: no
