@@ -17,11 +17,6 @@ hooks:
       timeout: 300
       runas: ec2-user
 
-  AfterInstall:
-    - location: scripts/docker_login.sh
-      timeout: 300
-      runas: ec2-user
-
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
