@@ -7,7 +7,7 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/stop_container.sh
+    - location: scripts/stop.sh
       timeout: 300
       runas: ec2-user
     - location: scripts/install.sh
@@ -20,6 +20,6 @@ hooks:
       runas: ec2-user
 
   ApplicationStart:
-    - location: scripts/start_container.sh
+    - location: scripts/start.sh
       timeout: 300
       runas: ec2-user
