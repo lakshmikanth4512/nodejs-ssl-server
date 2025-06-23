@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "===== START SCRIPT STARTED ====="
 
-IMAGE_URI=123456789012.dkr.ecr.ap-south-1.amazonaws.com/nodejs-ssl-server:latest
+IMAGE_URI=845091770108.dkr.ecr.ap-south-1.amazonaws.com/nodejs-ssl-server:latest
 
-# Login and pull image
-aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $(echo $IMAGE_URI | cut -d/ -f1)
+# Login to ECR and pull the image
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 845091770108.dkr.ecr.ap-south-1.amazonaws.com
 docker pull $IMAGE_URI
 
 # Run the container
