@@ -7,6 +7,9 @@ files:
 
 hooks:
   BeforeInstall:
+    - location: scripts/fix_permissions.sh
+      timeout: 60
+      runas: ec2-user
     - location: scripts/stop.sh
       timeout: 300
       runas: ec2-user
