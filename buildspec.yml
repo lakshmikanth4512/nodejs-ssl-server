@@ -5,8 +5,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 845091770108.dkr.ecr.ap-south-1.amazonaws.com
-      - REPOSITORY_URI=845091770108.dkr.ecr.ap-south-1.amazonaws.com/nodejs-ssl-server
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 301984890704.dkr.ecr.ap-south-1.amazonaws.com
+      - REPOSITORY_URI=301984890704.dkr.ecr.ap-south-1.amazonaws.com/repo-ecr-cicd
 
   build:
     commands:
