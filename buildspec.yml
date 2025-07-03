@@ -24,10 +24,5 @@ phases:
 
 artifacts:
   files:
-    - appspec.yml
-    - scripts/**
-    - Dockerfile
-    - app.js
-    - package.json
-    - package-lock.json
-  discard-paths: no
+    - '**/*'                    # Include everything (scripts, appspec.yml, Dockerfile, app.js, etc.)
+  discard-paths: no             # Keep directory structure (required for scripts in /scripts)
