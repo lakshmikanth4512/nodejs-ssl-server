@@ -24,5 +24,6 @@ phases:
 
 artifacts:
   files:
-    - '**/*'                    # Include everything (scripts, appspec.yml, Dockerfile, app.js, etc.)
-  discard-paths: no             # Keep directory structure (required for scripts in /scripts)
+    - '**/*'                # This ensures all folders/files (scripts, app.js, etc.)
+  base-directory: .         # Ensure it picks everything from root
+  discard-paths: no         # Preserve folder structure (scripts/ must remain intact)
